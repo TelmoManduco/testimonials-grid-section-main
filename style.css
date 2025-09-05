@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&display=swap');
+
+:root {
+
+    /* Primary */
+    --purple50: #eee5ff;
+    --purple300: #c4a2f6;
+    --purple500: #7541c8;
+
+    /* Neutral */
+    --grey100: #e7eaee;
+    --grey200: #cfcfcf;
+    --grey400: #676d7e;
+    --grey500: #48556a;
+    --dark-blue: #19212e;
+    --black: #121212;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 13px;
+    color: var(--grey200);
+    background-color: var(--grey100);
+}
+
+.main {
+    padding: 2rem;
+}
+
+.section {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.card {
+    padding: 1.5rem 1rem;
+    border-radius: 10px;
+}
+
+.card .title {
+    margin: 1.5rem 0;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.profile-section img {
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--purple300);
+}
+
+.card:nth-child(1) { background-color: var(--purple500);}
+.card:nth-child(2) { background-color: var(--grey500);}
+.card:nth-child(3) { background-color: white;}
+.card:nth-child(4) { background-color: var(--dark-blue);}
+.card:nth-child(5) { background-color: white;}
+
+.card-1 .title, .card-2 .title {
+    color: var(--grey100);
+}
+
+.card-3  {
+    color: var(--grey400);
+}
+
+.card-3 .title {
+    color: var(--grey500);
+}
