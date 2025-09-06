@@ -41,6 +41,7 @@ body {
 .card {
     padding: 1.5rem 1rem;
     border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.274);
 }
 
 .card .title {
@@ -56,23 +57,45 @@ body {
 .profile-section img {
     width: 50px;
     border-radius: 50%;
+}
+
+.card-1 .profile-section img, .card-4 .profile-section img {
     border: 2px solid var(--purple300);
 }
 
-.card:nth-child(1) { background-color: var(--purple500);}
-.card:nth-child(2) { background-color: var(--grey500);}
-.card:nth-child(3) { background-color: white;}
-.card:nth-child(4) { background-color: var(--dark-blue);}
-.card:nth-child(5) { background-color: white;}
+.card-1 { background-color: var(--purple500);}
+.card-2 { background-color: var(--grey500);}
+.card-3 { background-color: white;}
+.card-4 { background-color: var(--dark-blue);}
+.card-5 { background-color: white;}
 
+/*
 .card-1 .title, .card-2 .title {
     color: var(--grey100);
 }
 
-.card-3  {
+.card-3, .card-5  {
     color: var(--grey400);
 }
 
-.card-3 .title {
+.card-3 .title, .card-5 .title {
+    color: var(--grey500);
+}
+*/
+
+
+.card-1, .card-2, .card-4 {
+    color: var(--grey100); /* texto claro */
+}
+
+.card-1 .title, .card-2 .title, .card-4 .title {
+    color: var(--grey100);
+}
+
+.card-3, .card-5 {
+    color: var(--grey400); /* texto escuro */
+}
+
+.card-3 .title, .card-5 .title {
     color: var(--grey500);
 }
