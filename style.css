@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&display=swap');
 
 :root {
-
     /* Primary */
     --purple50: #eee5ff;
     --purple300: #c4a2f6;
@@ -24,13 +23,15 @@
 
 body {
     font-family: "Barlow Semi Condensed", sans-serif;
-    font-size: 13px;
+    font-size: 1rem;
     color: var(--grey200);
     background-color: var(--grey100);
 }
 
 .main {
     padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .section {
@@ -41,13 +42,10 @@ body {
 .card {
     padding: 1.5rem 1rem;
     border-radius: 10px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.274);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
-.card .title {
-    margin: 1.5rem 0;
-}
-
+/* ----- Profile ----- */
 .profile-section {
     display: flex;
     align-items: center;
@@ -59,43 +57,59 @@ body {
     border-radius: 50%;
 }
 
-.card-1 .profile-section img, .card-4 .profile-section img {
+.card-1 .profile-section img,
+.card-4 .profile-section img {
     border: 2px solid var(--purple300);
 }
 
-.card-1 { background-color: var(--purple500);}
-.card-2 { background-color: var(--grey500);}
-.card-3 { background-color: white;}
-.card-4 { background-color: var(--dark-blue);}
-.card-5 { background-color: white;}
+/* ----- Titles ----- */
+.card .title {
+    margin: 1.5rem 0;
+}
 
-/*
-.card-1 .title, .card-2 .title {
+/* ----- Cards colors ----- */
+.card-1 { background-color: var(--purple500); }
+.card-2 { background-color: var(--grey500); }
+.card-3 { background-color: #fff; }
+.card-4 { background-color: var(--dark-blue); }
+.card-5 { background-color: #fff; }
+
+/* ----- Text by type of card ----- */
+.card-1, .card-2, .card-4 {
     color: var(--grey100);
 }
-
-.card-3, .card-5  {
-    color: var(--grey400);
-}
-
-.card-3 .title, .card-5 .title {
-    color: var(--grey500);
-}
-*/
-
-
-.card-1, .card-2, .card-4 {
-    color: var(--grey100); /* texto claro */
-}
-
 .card-1 .title, .card-2 .title, .card-4 .title {
     color: var(--grey100);
 }
 
 .card-3, .card-5 {
-    color: var(--grey400); /* texto escuro */
+    color: var(--grey400);
 }
-
 .card-3 .title, .card-5 .title {
     color: var(--grey500);
+}
+
+@media (min-width: 768px) {
+    .section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .section {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card-1 {
+        grid-column: span 2;
+    }
+
+    .card-5 {
+        grid-column: 4;
+        grid-row: 1 / span 2;
+    }
+
+    .card-4 {
+        grid-column: span 2;
+    }
 }
